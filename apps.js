@@ -3,11 +3,15 @@ const app = express();
 const port = 3030;
 
 /* Rutas */
-const otherRoutes = require("./routers/main.routes");
-const aboutRoutes = require("./routers/about.routes");
+const otherRoutes = require("./routes/main.routes");
+const aboutRoutes = require("./routes/about.routes");
 
-/* Settings */
+/* Middleware */
 app.use(express.static("public"));
+
+/* Settings*/
+app.set("view engine","ejs");
+app.set("views", "./views");
 
 /* Enrutadores */
 app.use("/", otherRoutes);
