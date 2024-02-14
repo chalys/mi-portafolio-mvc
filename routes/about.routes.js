@@ -5,4 +5,3 @@ const otherControllers = require('../controllers/other/index');
 router.get("/", otherControllers.about);
 
 module.exports = router;
-

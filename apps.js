@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3030;
+const path = require('path');
 
 /* Rutas */
 const otherRoutes = require("./routes/main.routes");
@@ -19,5 +20,5 @@ app.use("/about", aboutRoutes);
 
 /* Configuramos servidor */
 app.listen(port, () => {
-  console.log("Servidor funcionanado");
+  console.log(`http://localhost:${port}`);
 });
